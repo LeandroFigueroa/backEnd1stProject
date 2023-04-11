@@ -17,7 +17,6 @@ class ProductManager {
       } else {
         const product = {
           id: this.generateId(),
-
           title: title,
           code: code,
           description: description,
@@ -42,7 +41,7 @@ class ProductManager {
     if (find) {
       console.log(find);
     } else {
-      console.log("Not found");
+      console.log("Erro 404: Not found");
     }
   }
 }
@@ -109,7 +108,8 @@ getProducts.addProduct(
 );
 
 console.log(getProducts.products);
-// busqueda ok
+
+// Busqueda ok
 getProducts.findProductById(3);
-//busqueda con ID inexistente
+// Busqueda con ID inexistente
 getProducts.findProductById(10);
